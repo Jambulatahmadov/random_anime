@@ -7,7 +7,7 @@ DOMAIN = "https://yummyanime.club"
 def pars():
 	URL = DOMAIN + '/top'
 	HEADERS = {
-		'User-agent': 'Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/87.0.4280.88 Safari/537.36'
+		'User-agent': 'Mozilla/5.0 (X11; Linux x86_64)'
 	}
 
 	response = requests.get(URL, headers=HEADERS)
@@ -23,14 +23,5 @@ def pars():
 	
 	random_anime = random.choice(ani)
 	print(f'Название: {random_anime["title"]}\nСсылка: {DOMAIN + random_anime["link"]}')
-
-
-		#print(random.choice(ani))
-		# for anime in ani:
-		#  	a = print(f'Название> {anime["title"]}\nСсылка> {"https://yummyanime.club" + anime["link"]}')
-
-		# random_anime = random.choice(a)
-		# print(random_anime)
-
 
 pars()
